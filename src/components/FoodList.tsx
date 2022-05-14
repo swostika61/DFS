@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
+import axios from 'axios';
 import {Container,Row,Col,Table} from 'react-bootstrap'
 const FoodList = () => {
+  
+  const [foodlist,setFoodlist]=useState([]);
+  // useEffect(()=>{
+  //   const fetchfood=async()=>{
+  //     const result=await axios.get("http://localhost:4000/api/admin/food/fetch");
+  //     await setFoodlist(result.data.foods)
+  //   }
+  //   fetchfood();
+    
+  // },[])
   return (
     <Container className="bg-light ">
+      
       <Row>
         <Col>
         <div className='fw-bold fs-1'>
@@ -64,6 +76,10 @@ const FoodList = () => {
             </tbody>
 
           </Table>
+
+
+
+
         </Col>
       </Row>
     </Container>

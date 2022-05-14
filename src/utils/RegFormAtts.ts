@@ -1,23 +1,11 @@
 
       const inputs = [
         {
-          label:"First Name",
+          label:"Name",
           type: "text",
-          placeholder: "First Name",
-          name: "fname",
+          placeholder: "Name",
+          name: "name",
         },
-        {
-          label:"Middle Name",
-          type: "text",
-          placeholder: "Middle Name",
-          name: "mname",
-          },
-        {
-          label:"Last Name",
-          type: "text",
-          placeholder: "Last Name",
-          name: "lname",
-          },
         {
           label:"Email",
           type: "email",
@@ -30,6 +18,12 @@
           placeholder: "Password",
           name: "password",
           },
+          {
+            label:"Organization ID",
+            type:"number",
+            placeholder:"Organization ID",
+            name:"org_id"
+          }
       ];
     
       export default inputs;

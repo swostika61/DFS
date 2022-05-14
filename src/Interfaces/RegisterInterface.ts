@@ -1,12 +1,13 @@
 type role="ORGANIZATION ADMIN"|"USER"|"CANTEEN ADMIN";
 
 interface Iregister{
-    fname:string;
-    mnname?:string;
-    lname:string;
+    name:string;
+    // mname?:string;
+    // lname:string;
     email:string;
     password:string;
-    role:role;
+    role:string;
+    org_id:number;
 }
 
 export default Iregister;
