@@ -7,12 +7,14 @@ import * as yup from 'yup';
 import Iregister from '../Interfaces/RegisterInterface';
 import axios from 'axios';
 
+
+
 const schema=yup.object().shape({
     name:yup.string().required("First name cannot be empty").matches(/^[aA-zZ\s]+$/, "Only alphabets are allowed for this field "),
     email:yup.string().email("Enter valid email").required("Email cannot be empty"),
     password:yup.string().required("password cannot be empty").min(8,"minimu 8 characters is required").max(15,"15 characters is limit"),
     role:yup.string().required("role cannot be empty"),
-    org_id:yup.number().required("Organization id is mandetary")
+    org_id:yup.string().required("Organization id is mandetary")
 })
 
 const RegisterUSer:React.FC = () => {
@@ -31,14 +33,6 @@ const RegisterUSer:React.FC = () => {
            console.error("error",error);
            setShow({status:true,statusCode:error.response.status,message:error.response.data.message})         
         })
-
-      //   axios.post("http://192.168.10.7:4000/api/admin/user/create",data).then((res)=>{
-      //     setShow({status:true,statusCode:res.status,message:res.data?.message});
-      //     reset();
-      //   }).catch((error)=>{
-      //     console.error("error",error);
-      //     setShow({status:true,statusCode:error.response.status,message:error.response.data.message})         
-      //  })
       
       }
     

@@ -12,9 +12,9 @@ function App() {
   return (
     <div className="App">
       
-     {/* <RegisterUSer/> */}
+     <RegisterUSer/>
      <Userlist/>
-     {/* <FoodList/> */}
+     <FoodList/>
 
      {/* <Register/> */}
     </div>
