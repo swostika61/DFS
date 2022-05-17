@@ -30,6 +30,13 @@ const userlist=[
         email:"mlimbu@deerhold.org",
         role:"USER",
         org_id:2
+    },
+    {
+        id:5,
+        name:"llimbu",
+        image:"image1",
+        email:"llimbu@admin.com",
+        role:"SP_ADMIN",
     }
 ]
 

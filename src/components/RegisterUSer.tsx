@@ -22,7 +22,7 @@ const RegisterUSer:React.FC = () => {
   const [show,setShow]=useState({status:false,statusCode:0,message:""});
 
     const {register,handleSubmit,reset,formState:{errors}}=useForm({
-        resolver:yupResolver(schema),mode:'onSubmit'
+        resolver:yupResolver(schema),mode:'all'
     })
 
       const submitEvent=(data:Iregister)=>{

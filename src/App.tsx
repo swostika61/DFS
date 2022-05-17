@@ -12,8 +12,8 @@ function App() {
   return (
     <div className="App">
       
-     <RegisterUSer/>
-     <Userlist/>
+     {/* <RegisterUSer/> */}
+     {/* <Userlist/> */}
      <FoodList/>
 
      {/* <Register/> */}

@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import axios from 'axios';
 import {Container,Row,Col,Table} from 'react-bootstrap'
+import {RiArrowDropDownLine} from 'react-icons/ri';
 const FoodList = () => {
   
   const [foodlist,setFoodlist]=useState([]);
@@ -20,7 +21,7 @@ const FoodList = () => {
         <div className='fw-bold fs-1'>
           Today's Menu
         </div>
-          <Table responsive="sm" striped bordered hover className='rounded'>
+          <Table responsive="sm" borderless hover className='rounded'>
             <thead>
               <tr>
                 <th>
@@ -45,6 +46,15 @@ const FoodList = () => {
               </tr>
             </thead>
             <tbody>
+              <tr className='bg-danger border-0'>
+                <td><RiArrowDropDownLine/></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
               <tr>
                 <td>1</td>
                 <td>Tea (black)</td>
