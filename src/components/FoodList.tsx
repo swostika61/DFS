@@ -5,17 +5,21 @@ import {RiArrowDropDownLine} from 'react-icons/ri';
 const FoodList = () => {
   
   const [foodlist,setFoodlist]=useState([]);
-  // useEffect(()=>{
-  //   const fetchfood=async()=>{
-  //     const result=await axios.get("http://localhost:4000/api/admin/food/fetch");
-  //     await setFoodlist(result.data.foods)
-  //   }
-  //   fetchfood();
+  useEffect(()=>{
+    const fetchfood=async()=>{
+      const result=await axios.get("http://localhost:4000/api/admin/food/fetch");
+      await setFoodlist(result.data.foods)
+    }
+    fetchfood();
     
-  // },[])
+  },[])
   return (
     <Container className="bg-light ">
-      
+      {
+        console.log(foodlist)
+        
+      }
+
       <Row>
         <Col>
         <div className='fw-bold fs-1'>
@@ -46,6 +50,32 @@ const FoodList = () => {
               </tr>
             </thead>
             <tbody>
+              {
+                foodlist.map((item)=>{
+                  return  (<tr className='bg-secondary text-white className="fs-3" border-0' key={item.id}>
+                  <td><RiArrowDropDownLine/></td>
+                  <td>{item.name}</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  
+                </tr>)
+                })
+                // .map((food)=>{
+                //   return (
+                //     <tr key={food.id}>
+                //     <td>{food.id}</td>
+                //     <td>{food.name}</td>
+                //     <td>image</td>
+                //     <td>9:00 AM - 04:30 PM</td>
+                //     <td>100</td>
+                //     <td>11.20</td>
+                   
+                //   </tr>
+                //   )
+                // })
+              }
               <tr className='bg-danger border-0'>
                 <td><RiArrowDropDownLine/></td>
                 <td></td>
