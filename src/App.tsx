@@ -6,14 +6,17 @@ import Userlist from './components/Userlist'
 import FoodList from './components/FoodList'
 import Register from './featuretest/Register'
 import { Toast, ToastBody, ToastContainer, ToastHeader } from 'react-bootstrap'
+import AddOrg from './components/AddOrg'
+import OrgList from './components/OrgList'
 
 function App() {
   const[show,setShow]=useState(true)
   return (
     <div className="App">
-      
-     {/* <RegisterUSer/> */}
-     {/* <Userlist/> */}
+      <OrgList/>
+    <AddOrg/>
+     <RegisterUSer/>
+     <Userlist/>
      <FoodList/>
 
      {/* <Register/> */}
