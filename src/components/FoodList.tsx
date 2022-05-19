@@ -44,14 +44,16 @@ const FoodList = () => {
               </tr>
             </thead>
             <tbody>
-              <Foods foodlist={foodlist} />
+              {
+                foodlist?.map((item)=>{
+                  return(
+                    <Foods foodlist={item}  />
+                  )
+                })  
+              }
             </tbody>
 
           </Table>
-
-
-
-
         </Col>
       </Row>
     </Container>
@@ -59,3 +61,4 @@ const FoodList = () => {
 }
 
 export default FoodList
+{/* <Foods foodlist={foodlist} /> */}
