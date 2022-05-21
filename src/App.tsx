@@ -8,18 +8,13 @@ import Register from './featuretest/Register'
 import { Toast, ToastBody, ToastContainer, ToastHeader } from 'react-bootstrap'
 import AddOrg from './components/AddOrg'
 import OrgList from './components/OrgList'
+import Styledtest from './featuretest/styledcomponent/Styledtest'
 
 function App() {
   const[show,setShow]=useState(true)
   return (
     <div className="App">
-      <OrgList/>
-    <AddOrg/>
-     <RegisterUSer/>
-     <Userlist/>
-     <FoodList/>
-
-     {/* <Register/> */}
+     <Styledtest/>
     </div>
   )
 }
