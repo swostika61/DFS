@@ -23,23 +23,9 @@ font-size:20px;
 
 const App=()=> {
   return (
-<<<<<<< HEAD
     <div className="App">
      <Styledtest/>
     </div>
-=======
-     <Container className='bg-secondary'>
-       <StyledContainer>
-         This is working fine
-       </StyledContainer>
-     </Container>
-     
-     
-     
-   
-
- 
->>>>>>> 464088e05493954278201bb0bfddaa8af1853588
   )
 }
 

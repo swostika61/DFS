@@ -2,6 +2,10 @@ import React, { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import styled from 'styled-components';
 
+type btn="primary"|"danger";
+interface Ibutton{
+    prop:btn;
+}
 
 const MainDiv= styled.div`
     display:flex;
@@ -18,7 +22,8 @@ const MainDiv= styled.div`
 `;
 
 const Title=styled.p`
-    font-size:24px;
+    color:black;
+    font-size:26px;
     font-weight:700;
     padding-left:10px;
 `;
@@ -31,14 +36,20 @@ const Body=styled.div`
     padding-left:10px;
 `;
 
-const Button=styled.button`
+const Button=styled.button<Ibutton>`
     font-size:25px;
     border-radius:4px;
-    background:red;
+    background:${Ibutton=>Ibutton.prop==="primary"?"green":"red"};
     padding:0 5px 0 5px;
     border:transparent;
     color:white;
     min-width:40px;
+
+    &:hover{
+        background:${Ibutton=>Ibutton.prop==="primary"?"gold":"orange"};
+    }
+
+
 `
 
 const Number=styled.h3`
@@ -63,8 +74,8 @@ const Styledtest = () => {
                         <h2>Counter App</h2>
                         <Number>{num}</Number>
                         <FlexDiv>
-                        <Button onClick={()=>{setNum(num+1)}} >+</Button>
-                        <Button onClick={()=>{setNum(num-1)}} >-</Button>
+                        <Button prop="danger" onClick={()=>{setNum(num-1)}} >-</Button>
+                        <Button prop="primary"  onClick={()=>{setNum(num+1)}} >+</Button>
                         </FlexDiv>
                     </Body>
                 </MainDiv>
